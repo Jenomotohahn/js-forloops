@@ -64,7 +64,14 @@ for (var i = 0; i < presidents.length; i++){
   console.log('The value at '+ i + ' is '+ presidents[i]+ '.');
 }
 
+console.log(presidents.length);
 
+
+function leaders(person){
+  for( var i = 0; i < person.length; i++){
+  console.log('President ' + person[i] + ' was a great leader.' );
+}
+}
 
 
 
