@@ -219,6 +219,20 @@ Inside of this function write a for-loop that will iterate through the contents 
 
 
 
+var valuesArray = [99, 66, 829, 8, 76];
+var copyValuesArray = [];
+
+function copyArray ( originArray, destinationArray){
+  for (i = 0; i <= originArray.length-1; i++){
+    destinationArray.push(originArray[i]);
+  }
+}
+copyArray(valuesArray, copyValuesArray);
+console.log(copyValuesArray);
+
+
+
+
 /*Final Boss*/
 
 /* 11) Go Long
