@@ -145,7 +145,7 @@ Note that every odd index value in `oopsArray` is currently `undefined`. Using a
 
 var oppsArray = [ 'turn', , 'down', ,'for',, 'what'];
 
-for (i = 1; i<=oppsArray.length; i++){
+for (i = 1; i<=oppsArray.length-1; i++){
   if (i%2 !== 0){
     oppsArray[i] = 'nope';
   }
@@ -165,6 +165,15 @@ down
 nope
 turn
 */
+
+
+for (i = oppsArray.length; i>= 0 ; i--){
+  console.log(oppsArray[i]);
+}
+
+
+
+
 
 
 /* 9) Siesta Time
