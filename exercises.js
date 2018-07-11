@@ -273,6 +273,20 @@ Write a function named `generateArrayOfStrings` which takes a single argument `s
 
 */
 
+var miscStorage = [ [], 'Carrots', 9, 'Beets', {}, {name: "Todd B."}, 'Mush' ];
+var newMiscStorageArray =[];
+
+function generateArrayOfStrings(storage){
+    for (i = 0; i < storage.length; i++){
+      if (typeof storage[i] === 'string'){
+        newMiscStorageArray.push(storage[i]);
+      }
+    }
+}
+
+generateArrayOfStrings(miscStorage);
+console.log(newMiscStorageArray);
+
 
 
 
