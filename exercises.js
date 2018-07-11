@@ -122,12 +122,36 @@ Console.log your results.
 */
   
 
+var oddSum = 0;
+var oddNumberCount = 0;
+for (i = 1; oddNumberCount<=50; i++){
+  if (i%2 !== 0){
+    oddSum += i;
+    oddNumberCount++
+  }
+}
+
+console.log(oddSum);
+
+
+
 /* 7) Oops There It is
 Declare a variable named `oopsArray` and assign its to the following array: `[ 'turn' , , 'down' , , 'for' , , 'what' ]`.
 Note that every odd index value in `oopsArray` is currently `undefined`. Using a for-loop, add the string `'nope'` to every odd index. Console.log your result. It should look like this:
 
 [ 'turn' , 'nope' , 'down' , 'nope' , 'for' , 'nope' , 'what' ]
 */
+
+
+var oppsArray = [ 'turn', , 'down', ,'for',, 'what'];
+
+for (i = 1; i<=oppsArray.length; i++){
+  if (i%2 !== 0){
+    oppsArray[i] = 'nope';
+  }
+}
+console.log(oppsArray);
+
 
 
 /* 8) Is It There Oops
