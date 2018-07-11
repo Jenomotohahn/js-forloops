@@ -145,7 +145,7 @@ Note that every odd index value in `oopsArray` is currently `undefined`. Using a
 
 var oppsArray = [ 'turn', , 'down', ,'for',, 'what'];
 
-for (i = 1; i<=oppsArray.length-1; i++){
+for (i = 1; i<oppsArray.length; i++){
   if (i%2 !== 0){
     oppsArray[i] = 'nope';
   }
@@ -191,7 +191,7 @@ Inside of this function write a for-loop that will iterate through the `napSched
 var napSchedule = [false, false, true, false, true, true];
 
 function nap(schedule){
-  for (i = 0; i<= schedule.length; i++){
+  for (i = 0; i< schedule.length; i++){
     if (schedule[i] === true){
       console.log('ZzZzZzZz');
     }else if (schedule[i] === false){
@@ -223,7 +223,7 @@ var valuesArray = [99, 66, 829, 8, 76];
 var copyValuesArray = [];
 
 function copyArray ( originArray, destinationArray){
-  for (i = 0; i <= originArray.length-1; i++){
+  for (i = 0; i < originArray.length; i++){
     destinationArray.push(originArray[i]);
   }
 }
@@ -248,7 +248,7 @@ function findLongestWord(quote){
   var quoteArray = quote.split(" ");
   var longestWord = "";
   
-  for (i = 0; i <= quoteArray.length-1; i++){
+  for (i = 0; i < quoteArray.length; i++){
       if(quoteArray[i].length > longestWord.length){
        longestWord = quoteArray[i];
     }
