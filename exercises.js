@@ -101,6 +101,19 @@ Console.log your results.
 */
 
 
+
+var evenNumber = [];
+
+for (var i = 0; evenNumber.length <= 50; i++){
+  if (i % 2 === 0){
+    evenNumber.push(i);
+  }
+}
+
+console.log(evenNumber);
+
+
+
 /* 6) Up the Odds
 Declare a variable named `oddSum` and assign it to the Number value 0.
 
