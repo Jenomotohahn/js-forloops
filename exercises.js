@@ -242,6 +242,28 @@ Write a function that will iterate through the string value and return the longe
 
 
 
+var topQuote = 'Learn from yesterday, live for today and hope for tomorrow.';
+
+function findLongestWord(quote){
+  var quoteArray = quote.split(" ");
+  var longestWord = "";
+  
+  for (i = 0; i <= quoteArray.length-1; i++){
+      if(quoteArray[i].length > longestWord.length){
+       longestWord = quoteArray[i];
+    }
+  } return longestWord;
+}
+
+console.log(findLongestWord(topQuote));
+
+
+
+
+
+
+
+
 /* 12) Puppet Master
 Declare a variable named `miscStorage` set it's value to be: `[ [], 'Carrots', 9, 'Beets', {}, {name: "Todd B."}, 'Mush' ]`
 Write a function named `generateArrayOfStrings` which takes a single argument `storage`. This function will return a new Array with only `String` values inside of it.
@@ -250,6 +272,9 @@ Write a function named `generateArrayOfStrings` which takes a single argument `s
    @return Datatype: Array
 
 */
+
+
+
 
 
 
