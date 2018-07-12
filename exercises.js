@@ -300,6 +300,29 @@ var myWay = "i've lived a life that's full, i've traveled each and every highway
 
 
 
+/*function capFirstLetter (phrase){
+  var phraseArray = phrase.split(' ');
+  for( i = 0; i < phraseArray.length; i++){
+    phraseArray[i]= phraseArray[i].charAt(0).toUpperCase() + phraseArray[i].slice(1,phraseArray[i].length); 
+  } var newMyWay = phraseArray.toString();
+    return newMyWay
+}
+console.log(capFirstLetter(myWay));*/
+
+
+function capFirstLetter (phrase){
+  var newPhrase = phrase.charAt(0).toUpperCase() + phrase.slice(2,phrase.length-1);
+  for (i=1; i<newPhrase.length; i++){
+    if (newPhrase.charAt(i) === " "){
+      newPhrase = newPhrase.slice(0,i+1) + newPhrase[i+1].toUpperCase() + newPhrase.slice(i+2, newPhrase.length-1);
+    }
+  }return newPhrase
+}
+
+console.log(capFirstLetter(myWay));
+
+
+
 /* 14) Sightseeing
 Write a function that will loop through the multi-dimensional array and console.log the city and landmark on separate lines.
 Note, please use two for loops to complete this problem
@@ -308,6 +331,18 @@ Note, please use two for loops to complete this problem
   */
 
 var guide = [["Honolulu", "Waikiki"], ["Tokyo", "Tsukiji Fish Market"], ["Cairo", "Pyramids"],["Rome", "Colosseum"]];
+
+
+
+function cityLandmark(str){
+  for (i = 0; i < str.length; i++){
+    for (j=0; j < str[i].length; j++){
+      console.log(str[i][j]);
+    }
+  }
+}
+cityLandmark(guide);
+
 
 
 
@@ -321,4 +356,47 @@ The function will iterate through the `cohort` argument and check each student's
 If the `enrolled` property is set to `true` then change that student's `graduated` property to `true`. Otherwise, if `enrolled` is set to `false` then change `enrolled` to `true` leaving `graduated` alone and unchanged.
 Console.log your result.
 */
+
+
+var currentCohort = [
+  {
+    name: 'Doug',
+    graduated: false,
+    enrolled: true
+  },
+  {
+    name: 'Pat',
+    graduated: false,
+    enrolled: false
+  },
+  {
+    name: 'Marsha',
+    graduated: false,
+    enrolled: false
+  },
+  {
+    name: 'Moira',
+    graduated: false,
+    enrolled: true
+  },
+  {
+    name: 'Ben',
+    graduated: false,
+    enrolled: true
+  },
+  {
+    name: 'Nigel the Giraffe',
+    graduated: false,
+    enrolled: false
+  },
+  {
+    name: 'Brandon the Shark',
+    graduated: false,
+    enrolled: true
+  }
+]
+
+
+
+
 
