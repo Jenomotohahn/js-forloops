@@ -11,7 +11,7 @@ Write a for-loop that will iterate through 20 numbers (starting at 1 and ending 
 
 
 for (var i = 1; i < 21; i++){
-  console.log('Now serving' + i);
+  console.log('Now serving ' + i + '.');
 }
 
 
@@ -72,6 +72,8 @@ function leaders(person){
   console.log('President ' + person[i] + ' was a great leader.' );
 }
 }
+leaders(presidents);
+
 
 
 
@@ -82,11 +84,11 @@ Declare a variable named `stringOfNumbers` and assign its value to an empty stri
 Write a for-loop that concatenates a Number value into that string on each iteration, starting at `10` and continuing up to and including `20`. Console.log your result. It should read "1011121314151617181920"*/
 
 
-var stringOfNumbers = ''
+var stringOfNumbers = '';
 
-for (i=10; i < 21; i++){
+for (var i = 10; i < 21; i++){
 
-  stringOfNumbers = stringOfNumbers + i;
+  stringOfNumbers += i;
 }
 console.log(stringOfNumbers)
 
@@ -104,13 +106,15 @@ Console.log your results.
 
 var evenNumber = [];
 
-for (var i = 0; evenNumber.length <= 50; i++){
+for (var i = 0; evenNumber.length < 50; i++){
   if (i % 2 === 0){
     evenNumber.push(i);
   }
 }
 
 console.log(evenNumber);
+console.log(evenNumber.length);
+
 
 
 
@@ -124,7 +128,7 @@ Console.log your results.
 
 var oddSum = 0;
 var oddNumberCount = 0;
-for (i = 1; oddNumberCount<=50; i++){
+for (var i = 1; oddNumberCount<50; i++){
   if (i%2 !== 0){
     oddSum += i;
     oddNumberCount++
@@ -132,6 +136,7 @@ for (i = 1; oddNumberCount<=50; i++){
 }
 
 console.log(oddSum);
+console.log(oddNumberCount);
 
 
 
@@ -145,7 +150,7 @@ Note that every odd index value in `oopsArray` is currently `undefined`. Using a
 
 var oppsArray = [ 'turn', , 'down', ,'for',, 'what'];
 
-for (i = 1; i<oppsArray.length; i++){
+for (var i = 1; i<oppsArray.length; i++){
   if (i%2 !== 0){
     oppsArray[i] = 'nope';
   }
@@ -167,7 +172,7 @@ turn
 */
 
 
-for (i = oppsArray.length-1; i>= 0 ; i--){
+for (var i = oppsArray.length-1; i>= 0 ; i--){
   console.log(oppsArray[i]);
 }
 
@@ -191,7 +196,7 @@ Inside of this function write a for-loop that will iterate through the `napSched
 var napSchedule = [false, false, true, false, true, true];
 
 function nap(schedule){
-  for (i = 0; i< schedule.length; i++){
+  for ( var i = 0; i< schedule.length; i++){
     if (schedule[i] === true){
       console.log('ZzZzZzZz');
     }else if (schedule[i] === false){
@@ -223,7 +228,7 @@ var valuesArray = [99, 66, 829, 8, 76];
 var copyValuesArray = [];
 
 function copyArray ( originArray, destinationArray){
-  for (i = 0; i < originArray.length; i++){
+  for ( var i = 0; i < originArray.length; i++){
     destinationArray.push(originArray[i]);
   }
 }
@@ -248,7 +253,7 @@ function findLongestWord(quote){
   var quoteArray = quote.split(" ");
   var longestWord = "";
   
-  for (i = 0; i < quoteArray.length; i++){
+  for (var i = 0; i < quoteArray.length; i++){
       if(quoteArray[i].length > longestWord.length){
        longestWord = quoteArray[i];
     }
@@ -277,7 +282,7 @@ var miscStorage = [ [], 'Carrots', 9, 'Beets', {}, {name: "Todd B."}, 'Mush' ];
 var newMiscStorageArray =[];
 
 function generateArrayOfStrings(storage){
-    for (i = 0; i < storage.length; i++){
+    for ( var i = 0; i < storage.length; i++){
       if (typeof storage[i] === 'string'){
         newMiscStorageArray.push(storage[i]);
       }
@@ -312,7 +317,7 @@ console.log(capFirstLetter(myWay));*/
 
 function capFirstLetter (phrase){
   var newPhrase = phrase.charAt(0).toUpperCase() + phrase.slice(2,phrase.length-1);
-  for (i=1; i<newPhrase.length; i++){
+  for (var i=1; i<newPhrase.length; i++){
     if (newPhrase.charAt(i) === " "){
       newPhrase = newPhrase.slice(0,i+1) + newPhrase[i+1].toUpperCase() + newPhrase.slice(i+2, newPhrase.length-1);
     }
@@ -335,8 +340,8 @@ var guide = [["Honolulu", "Waikiki"], ["Tokyo", "Tsukiji Fish Market"], ["Cairo"
 
 
 function cityLandmark(str){
-  for (i = 0; i < str.length; i++){
-    for (j=0; j < str[i].length; j++){
+  for (var i = 0; i < str.length; i++){
+    for (var j=0; j < str[i].length; j++){
       console.log(str[i][j]);
     }
   }
@@ -396,7 +401,23 @@ var currentCohort = [
   }
 ]
 
+/*The function will iterate through the `cohort` argument and check each student's `enrolled` property.
+If the `enrolled` property is set to `true` then change that student's `graduated` property to `true`. Otherwise, if `enrolled` is set to `false` then change `enrolled` to `true` leaving `graduated` alone and unchanged.
+Console.log your result.
+*/
 
 
+
+function graduateAndSetNewClass (cohort){
+  for (i = 0; i < cohort.length; i++){
+    if (cohort[i].enrolled === true){
+       cohort[i].graduated = true;
+    }else {
+      cohort[i].enrolled = true;
+    }
+  }
+}
+
+console.log(graduateAndSetNewClass(currentCohort));
 
 
